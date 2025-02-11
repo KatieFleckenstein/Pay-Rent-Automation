@@ -1,0 +1,6 @@
+function myFunction() {
+  let sheet = SpreadsheetApp.getActiveSheet();
+  let adress = sheet.getRange("A1").getValue();
+  let subject = sheet.getRange("A2").getValue();
+  let body = sheet.getRange("A3").getValue();
+  MailApp.sendEmail(adress, subject, body);
